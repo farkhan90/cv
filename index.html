@@ -1,0 +1,510 @@
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Farkhan | Web Developer</title>
+    <link rel="icon" type="image/x-icon" href="./images/logo_f.png" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/tw-elements.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com/3.3.0"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          fontFamily: {
+            sans: ["Roboto", "sans-serif"],
+            body: ["Roboto", "sans-serif"],
+            mono: ["ui-monospace", "monospace"],
+          },
+          container: {
+            center: true,
+          },
+        },
+        corePlugins: {
+          preflight: false,
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <!-- Main navigation container -->
+    <nav
+      class="flex-no-wrap flex w-full fixed z-20 top-0 items-center justify-between bg-neutral-100 py-2 shadow-md shadow-black/5 dark:bg-neutral-600 dark:shadow-black/10 lg:flex-wrap lg:justify-start lg:py-4"
+      data-te-navbar-ref
+    >
+      <div class="flex w-full flex-wrap items-center justify-between px-3">
+        <!-- Left elements -->
+        <div class="relative flex items-center">
+          <!-- Icon -->
+          <a
+            class="my-1 mr-2 flex items-center text-neutral-900 hover:text-neutral-900 focus:text-neutral-900 lg:mb-0 lg:mt-0"
+            href="/"
+          >
+            <img
+              class="mr-2"
+              src="./images/logo_f.png"
+              style="height: 20px"
+              alt=""
+              loading="lazy"
+            />
+            <span class="font-medium dark:text-neutral-200">Farkhan</span>
+          </a>
+        </div>
+
+        <!-- Hamburger button for mobile view -->
+        <button
+          class="block border-0 bg-transparent px-2 text-neutral-500 hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0 dark:text-neutral-200 lg:hidden"
+          type="button"
+          data-te-collapse-init
+          data-te-target="#navbarSupportedContent1"
+          aria-controls="navbarSupportedContent1"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <!-- Hamburger icon -->
+          <span class="[&>svg]:w-7">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              class="h-7 w-7"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </span>
+        </button>
+
+        <!-- Collapsible navigation container -->
+        <div
+          class="!visible hidden basis-[100%] items-center lg:!flex lg:basis-auto"
+          id="navbarSupportedContent1"
+          data-te-collapse-item
+        >
+          <!-- Right navigation links -->
+          <ul
+            class="list-style-none mr-auto items-center flex flex-col pl-0 lg:flex-row"
+            data-te-navbar-nav-ref
+          >
+            <li class="my-3 lg:my-0 lg:pr-2" data-te-nav-item-ref>
+              <a
+                class="text-neutral-500 hover:text-neutral-700 focus:text-neutral-700 disabled:text-black/30 dark:text-neutral-200 dark:hover:text-neutral-300 dark:focus:text-neutral-300 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-zinc-400"
+                href="#about"
+                data-te-nav-link-ref
+                >About</a
+              >
+            </li>
+            <li class="my-3 lg:my-0 lg:pr-2" data-te-nav-item-ref>
+              <a
+                class="text-neutral-500 hover:text-neutral-700 focus:text-neutral-700 disabled:text-black/30 dark:text-neutral-200 dark:hover:text-neutral-300 dark:focus:text-neutral-300 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+                href="#passion"
+                data-te-nav-link-ref
+                >Passion</a
+              >
+            </li>
+            <li class="my-3 lg:my-0 lg:pr-2" data-te-nav-item-ref>
+              <a
+                class="text-neutral-500 hover:text-neutral-700 focus:text-neutral-700 disabled:text-black/30 dark:text-neutral-200 dark:hover:text-neutral-300 dark:focus:text-neutral-300 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+                href="#experience"
+                data-te-nav-link-ref
+                >Experience</a
+              >
+            </li>
+            <li class="my-3 lg:my-0 lg:pr-2" data-te-nav-item-ref>
+              <a
+                class="text-neutral-500 hover:text-neutral-700 focus:text-neutral-700 disabled:text-black/30 dark:text-neutral-200 dark:hover:text-neutral-300 dark:focus:text-neutral-300 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+                href="#work"
+                data-te-nav-link-ref
+                >Work</a
+              >
+            </li>
+            <li class="my-3 lg:my-0 lg:pr-2" data-te-nav-item-ref>
+              <a
+                class="text-neutral-500 hover:text-neutral-700 focus:text-neutral-700 disabled:text-black/30 dark:text-neutral-200 dark:hover:text-neutral-300 dark:focus:text-neutral-300 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+                href="#contact"
+                data-te-nav-link-ref
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Heading -->
+    <div
+      class="relative overflow-hidden bg-cover bg-no-repeat"
+      style="
+        background-position: center;
+        background-image: url('./images/bg-hero.jpg');
+        height: 350px;
+      "
+    >
+      <div
+        class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-fixed"
+        style="background-color: rgba(0, 0, 0, 0.75)"
+      >
+        <div class="flex h-full items-center justify-center">
+          <div class="px-6 text-center text-white md:px-12">
+            <h1 class="mb-6 text-3xl md:text-5xl font-bold">
+              Muhammad Farkhan Ashari
+            </h1>
+            <h3 class="mb-8 text-xl md:text-3xl font-bold">
+              Web Developer and IT Service
+            </h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- About -->
+    <section id="about" class="text-center">
+      <div class="p-10 md:p-20 flex flex-col w-full">
+        <h2 class="mb-8 text-4xl font-medium leading-tight">About</h2>
+        <img
+          src="./images/farkhan.jpg"
+          class="mx-auto w-32 rounded-lg shadow-lg"
+          alt="Avatar"
+        />
+        <p class="mt-8 text-justify indent-8">
+          Sebagai IT Support dan Web Programmer, saya memiliki pengalaman luas
+          dalam mendukung dan mengembangkan solusi teknologi informasi untuk
+          bisnis dan organisasi. Saya memiliki keahlian dalam memecahkan
+          masalah, mendiagnosis, dan memperbaiki masalah perangkat keras dan
+          perangkat lunak, serta pengalaman mengelola infrastruktur jaringan.
+          Selain itu, saya juga berpengalaman dalam mengembangkan aplikasi web,
+          baik front-end maupun back-end, serta memastikan keamanan dan
+          skalabilitas situs web. Saya dapat bekerja dengan berbagai bahasa
+          pemrograman seperti HTML, CSS, JavaScript, PHP, dan sudah terbiasa
+          menggunakan framework Laravel.
+        </p>
+      </div>
+    </section>
+
+    <!-- Passion -->
+    <section id="passion" class="">
+      <div class="p-10 md:p-20 flex flex-col w-full bg-gray-200"></div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="text-center">
+      <div class="p-10 md:p-20 flex flex-col w-full">
+        <h2 class="mb-8 text-4xl font-medium leading-tight">Experience</h2>
+        <p>
+          Saya telah melakukan pengembangan web selama sekitar 2 tahun,
+          melakukan perbaikan terhadap software dan hardware untuk perkantoran
+          dan pembelajaran selama 3 tahun, dan saya selalu ingin belajar lebih
+          banyak di industri yang serba cepat ini.
+        </p>
+        <div class="flex flex-wrap w-full mt-8">
+          <div class="grow md:basis-3/5 mb-4">
+            <span>BEBERAPA TEKNOLOGI YANG SAYA GUNAKAN:</span>
+            <div class="grid grid-cols-4 gap-4 mt-4">
+              <div class="grayscale-0 lg:grayscale hover:grayscale-0">
+                <img src="./images/html.png" class="w-32" alt="Avatar" />
+              </div>
+              <div class="grayscale-0 lg:grayscale hover:grayscale-0">
+                <img src="./images/css.png" class="w-32" alt="Avatar" />
+              </div>
+              <div class="grayscale-0 lg:grayscale hover:grayscale-0">
+                <img src="./images/js.png" class="w-32" alt="Avatar" />
+              </div>
+              <div class="grayscale-0 lg:grayscale hover:grayscale-0">
+                <img src="./images/coreldraw.png" class="w-32" alt="Avatar" />
+              </div>
+              <div class="grayscale-0 lg:grayscale hover:grayscale-0">
+                <img src="./images/laravel.png" class="w-32" alt="Avatar" />
+              </div>
+              <div class="grayscale-0 lg:grayscale hover:grayscale-0">
+                <img src="./images/mysql.png" class="w-32" alt="Avatar" />
+              </div>
+            </div>
+          </div>
+          <div class="grow md:basis-2/5 mb-4">
+            <span>DI MANA SAYA BEKERJA:</span>
+            <div
+              class="flex w-full justify-center mt-4 grayscale-0 lg:grayscale hover:grayscale-0"
+            >
+              <img src="./images/smsr.png" class="w-64" alt="Avatar" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work -->
+    <section id="work" class="text-center">
+      <div class="p-10 md:p-20 flex flex-col w-full bg-gray-200">
+        <h2 class="mb-8 text-4xl font-medium leading-tight">Project</h2>
+        <div class="grid lg:grid-cols-2 gap-6 text-left">
+          <div
+            class="relative overflow-hidden bg-no-repeat bg-cover shadow-lg rounded-lg"
+            data-mdb-ripple="true"
+            data-mdb-ripple-color="light"
+          >
+            <img src="./images/web_smsr.png" class="w-full" />
+            <a href="https://smkn3kasihan.sch.id/" target="_blank">
+              <div
+                class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed"
+                style="background-color: rgba(0, 0, 0, 0.4)"
+              >
+                <div class="flex justify-start items-end h-full">
+                  <div class="text-white m-6">
+                    <h5 class="font-bold text-lg mb-3">
+                      Website SMK N 3 Kasihan
+                    </h5>
+                    <p>
+                      <small
+                        >Published <u>13.01.2021</u> by Muhammad Farkhan
+                        Ashari</small
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div
+            class="relative overflow-hidden bg-no-repeat bg-cover shadow-lg rounded-lg"
+            data-mdb-ripple="true"
+            data-mdb-ripple-color="light"
+          >
+            <img src="./images/demunif.jpg" class="w-full" />
+            <a
+              href="https://drive.google.com/drive/folders/1tF2zmGJ-g_8HCBHehAyNChvrX8laXfbT?usp=drive_link"
+              target="_blank"
+            >
+              <div
+                class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed"
+                style="background-color: rgba(0, 0, 0, 0.4)"
+              >
+                <div class="flex justify-start items-end h-full">
+                  <div class="text-white m-6">
+                    <h5 class="font-bold text-lg mb-3">Aplikasi Demunif</h5>
+                    <p>
+                      <small
+                        >Published <u>26.10.2020</u> by Muhammad Farkhan
+                        Ashari</small
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="p-10 md:p-20 text-center text-gray-800">
+      <div class="max-w-[700px] mx-auto px-3 lg:px-6">
+        <h2 class="text-3xl font-bold mb-12">Contact us</h2>
+        <form>
+          <div class="form-group mb-6">
+            <input
+              type="text"
+              class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+              id="exampleInput7"
+              placeholder="Name"
+            />
+          </div>
+          <div class="form-group mb-6">
+            <input
+              type="email"
+              class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+              id="exampleInput8"
+              placeholder="Email address"
+            />
+          </div>
+          <div class="form-group mb-6">
+            <textarea
+              class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+              id="exampleFormControlTextarea13"
+              rows="3"
+              placeholder="Message"
+            ></textarea>
+          </div>
+          <div class="form-group form-check text-center mb-6">
+            <input
+              type="checkbox"
+              class="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain mr-2 cursor-pointer"
+              id="exampleCheck87"
+              checked
+            />
+            <label
+              class="form-check-label inline-block text-gray-800"
+              for="exampleCheck87"
+              >Send me a copy of this message</label
+            >
+          </div>
+          <button
+            type="submit"
+            class="w-full px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+          >
+            Send
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer container -->
+    <footer class="bg-neutral-200 text-center text-white dark:bg-neutral-600">
+      <div class="container pt-9">
+        <div class="mb-9 flex justify-center">
+          <a
+            target="_blank"
+            href="https://www.facebook.com/ikiaanlho"
+            class="mr-9 text-neutral-800 dark:text-neutral-200"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-4 w-4"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"
+              />
+            </svg>
+          </a>
+          <a
+            target="_blank"
+            href="https://twitter.com/Farkhan117"
+            class="mr-9 text-neutral-800 dark:text-neutral-200"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-4 w-4"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"
+              />
+            </svg>
+          </a>
+          <a
+            target="_blank"
+            href="https://www.instagram.com/farkhan_han/"
+            class="mr-9 text-neutral-800 dark:text-neutral-200"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-4 w-4"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+              />
+            </svg>
+          </a>
+          <a
+            target="_blank"
+            href="https://www.linkedin.com/in/muhammad-farkhan-ashari-29ab54120/"
+            class="mr-9 text-neutral-800 dark:text-neutral-200"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-4 w-4"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"
+              />
+            </svg>
+          </a>
+          <a
+            target="_blank"
+            href="https://github.com/farkhan90"
+            class="text-neutral-800 dark:text-neutral-200"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-4 w-4"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!--Copyright section-->
+      <div
+        class="bg-neutral-300 p-4 text-center text-neutral-700 dark:bg-neutral-700 dark:text-neutral-200"
+      >
+        © 2023 Copyright:
+        <a class="text-neutral-800 dark:text-neutral-400" href="/">Farkhan</a>
+      </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <button
+      type="button"
+      data-mdb-ripple="true"
+      data-mdb-ripple-color="light"
+      class="fixed hidden bottom-5 right-5 inline-block rounded-full bg-danger p-2 uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#dc4c64] transition duration-150 ease-in-out hover:bg-danger-600 hover:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] focus:bg-danger-600 focus:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] focus:outline-none focus:ring-0 active:bg-danger-700 active:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)]"
+      id="btn-back-to-top"
+    >
+      <svg
+        aria-hidden="true"
+        focusable="false"
+        data-prefix="fas"
+        class="w-4 h-4"
+        role="img"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 448 512"
+      >
+        <path
+          fill="currentColor"
+          d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"
+        ></path>
+      </svg>
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/tw-elements.umd.min.js"></script>
+    <script>
+      // Get the button
+      let mybutton = document.getElementById("btn-back-to-top");
+
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function () {
+        scrollFunction();
+      };
+
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+      // When the user clicks on the button, scroll to the top of the document
+      mybutton.addEventListener("click", backToTop);
+
+      function backToTop() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+    </script>
+  </body>
+</html>
