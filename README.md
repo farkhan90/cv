@@ -1,2 +1,2 @@
 # cv
-Portofolio
+Portofolio sederhana versi 1
